@@ -9,9 +9,11 @@ def main():
     args = argparser.parse_args()
 
     try:
-        int(args.port)
-    except TypeError:
-        print("Provided port was not integer, please set a number")
+        a = int(args.port)
+        if a < 0 or a > 65535:
+            raise ValueError()
+    except ValueError:
+        print("Provided port was not valid, please set a number between 0 and 65535")
         exit(0)
 
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
