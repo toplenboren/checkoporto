@@ -1,13 +1,13 @@
 # checkoporto
-Приложение, которое помогает понять, открыт ли определенный порт на вашем компьютере
+A simple `.py` script that allows you to understand whether the specified port is opened or not
 
-Выполнил: Горбунов Михаил
+# Pre-req
+`Python 3`
 
-Запуск:
+# Usage:
 `python main.py <port>`
 
-Примеры запуска:
+## Examples:
 
-`python main.py 80`
-
-`python main.py 22`
+`python main.py 80 // HTTP`
+`python main.py 22 // SSH`
